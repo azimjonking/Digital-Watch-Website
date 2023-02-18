@@ -490,3 +490,94 @@ img
     display: block;
     margin-top: 40px;
 }
+
+/*==== Product Section =====*/
+
+.product-item
+{
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 20px;
+}
+.product-item .product-item-inner
+{
+    padding: 15px;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.card-img
+{
+    width: 100px;
+    padding-bottom: 20px;
+    transition: all .5s ease-in;
+}
+.card-name
+{
+    position: absolute;
+    left: -28%;
+    top: 0;
+    width: 3.2rem;
+    height: 100%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-100);
+    color: var(--white);
+    font-weight: bold;
+    transition: all .5s ease-in;
+}
+.card-icon
+{
+    font-size: 1.2rem;
+    color: var(--black-100);
+}
+.card-icon:hover
+{
+    color: var(--main-color);
+}
+.card-prices
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: all .5s ease-in;
+}
+.card-price
+{
+    display: block;
+    text-align: center;
+}
+.card-price-before
+{
+    font-size: 0.70rem;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: .25rem;
+}
+.card-price-now
+{
+    font-size: .95rem;
+    font-weight: bold;
+    color: var(--black-100);
+}
+.product-item .product-item-inner:hover .card-name
+{
+    left: 0;
+}
+.product-item .product-item-inner:hover .card-img
+{
+    margin-left: 3rem;
+}
+.product-item .product-item-inner:hover .card-prices
+{
+    margin-left: 3rem;
+    padding: 0 1.5rem;
+}
