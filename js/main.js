@@ -5,6 +5,26 @@ window.onscroll = () =>
 {
     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
+
+/* Navbar Toggler */
+const navMenu = document.querySelector(".menu");
+navToggle = document.querySelector(".menu-btn");
+if(navToggle)
+{
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    })
+}
+// closing menu when navlink is clicked
+const navLink = document.querySelectorAll(".nav-link");
+function linkAction()
+{
+    const navMenu = document.querySelector(".menu");
+    navMenu.classList.remove("active")
+}
+navLink.forEach(n => n.addEventListener("click", linkAction))
+
+/* product colors */
 var pic = document.querySelector('#main-show');
 var cyan = document.querySelector('.cyan');
 var purple = document.querySelector('.purple');
